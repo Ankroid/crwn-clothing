@@ -6,7 +6,7 @@ import CustomButton from '../custom-button/custom-button.component';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
 
 
-export default class SignUo extends React.Component {
+export default class SignUp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,6 +19,7 @@ export default class SignUo extends React.Component {
 
     
     handleSubmit = async event => {
+        alert("hh")
         const { displayName, email, password, confirmPassword } = this.state
         event.preventDefault();
         if(password!==confirmPassword){
@@ -81,9 +82,9 @@ export default class SignUo extends React.Component {
                         label="Password"
                     />
                     <div className="buttons">
-                        <CustomButton type='submit' value='Submit Form'>
+                        <CustomButton onSubmit = {this.handleSubmit} type='submit' value='Submit Form'>
                             SIGN UP
-                    </CustomButton>
+                      </CustomButton>
                     </div>
                 </form>
 
