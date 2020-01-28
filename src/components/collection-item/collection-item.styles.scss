@@ -34,13 +34,14 @@
 
     .collection-footer{
         width: 100%;
+        background-color:green($color: #000000);
         height: 5%;
         justify-content: space-between;
         font-size: 18px;
-
         .name{
             width: 90%;
             margin-bottom: 15px;
+          }
         }
-    }
 }
+
